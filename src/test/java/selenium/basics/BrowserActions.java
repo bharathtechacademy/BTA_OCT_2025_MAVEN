@@ -25,7 +25,7 @@ public class BrowserActions {
 		driver.manage().deleteAllCookies();
 		
 //		6. Enter URL and Launch the Application (https://www.google.co.in/)   		
-		driver.get("https://www.google.co.in/");
+		driver.get("https://www.google.co.in/");		
 		
 //		7. Verify the application title (Google)  
 		String actualTitle = driver.getTitle();
@@ -41,6 +41,9 @@ public class BrowserActions {
 		
 //		14. Switch back to the main window
 //		15.Launch new window and Launch the application in new window (https://parabank.parasoft.com/parabank/index.htm)  
+		driver.switchTo().newWindow(WindowType.WINDOW);
+		driver.get("https://parabank.parasoft.com/parabank/index.htm");
+		
 //		16.Switch back to main window  
 //		17.Print browser window URL  
 //		18. Get the Size of window  
