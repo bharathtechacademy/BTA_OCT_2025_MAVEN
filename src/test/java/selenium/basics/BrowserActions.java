@@ -4,6 +4,7 @@ import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 public class BrowserActions {
 
@@ -29,24 +30,47 @@ public class BrowserActions {
 		
 //		7. Verify the application title (Google)  
 		String actualTitle = driver.getTitle();
+		String expectedTitle = "Google";
+		Assert.assertEquals(actualTitle, expectedTitle, "Title does not match");
 		
 //		8. Navigate to Different application (https://www.selenium.dev/)
-//		9. Go back to previous application
+		driver.navigate().to("https://www.selenium.dev/");
+		
+//		9. Go back to previous application		
+		driver.navigate().back();
+		
 //		10. Move forward to next application 
+		driver.navigate().forward();
+		
 //		11. Refresh the application  
-//		12.collect the main window id     
+		driver.navigate().refresh();
+		
+//		12.collect the main window id 		
+		String mainWindowId = driver.getWindowHandle();
+		System.out.println("Main Window ID: " + mainWindowId);
+		
 //		13.Launch new tab and Launch the application in new tab (https://in.search.yahoo.com/)   
 		driver.switchTo().newWindow(WindowType.TAB);
 		driver.get("https://in.search.yahoo.com/");
 		
-//		14. Switch back to the main window
+//		14. Switch back to the main window		
+		driver.switchTo().window(mainWindowId);//window is existing, newWindow is to create new
+		
 //		15.Launch new window and Launch the application in new window (https://parabank.parasoft.com/parabank/index.htm)  
 		driver.switchTo().newWindow(WindowType.WINDOW);
 		driver.get("https://parabank.parasoft.com/parabank/index.htm");
 		
 //		16.Switch back to main window  
-//		17.Print browser window URL  
+		driver.switchTo().window(mainWindowId);
+		
+//		17.Print browser window URL  		
+		String currentURL = driver.getCurrentUrl();
+		System.out.println("Current URL: " + currentURL);
+		
 //		18. Get the Size of window  
+		int width = driver.manage().window().getSize().getWidth();
+		int height = driver.manage().window().getSize().getHeight();
+		System.out.println("Window Size - Width: " + width + ", Height: " + height);
 		
 //		19. Close Current Window   
 		driver.close();
