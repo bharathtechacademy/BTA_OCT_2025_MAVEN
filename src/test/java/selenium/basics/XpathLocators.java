@@ -32,7 +32,33 @@ public class XpathLocators {
 	/********LEVEL 3 - combine multiple attribute and text values to locate (and) ******/
 	//Syntax 7: //tagName[@attribute1='value' and @attribute2='value' and text()='value']
 	
+	/********LEVEL 4 - Advanced XPath (with Relationships) *************************/
+	//Syntax 8: referenceElement/relationship::targetElement
 	
+	//Relationships:
+	
+	//1: parent
+	//2: child
+	//3: ancestor
+	//4. preceding-sibling
+	//5. following-sibling
+	//6. preceding  (prev. generations
+	//7. following  (next. generations
+	//8. / (child)
+	//9. // (with-in-the-family)
+	
+	// target --> target's sibling --> parent --> ancestor --> ancestor's parent
+	
+	
+	//ancestor: //ul[@class='leftmenu']
+	//parent://li (duplicate)
+	//sibling:N/A
+	//target: //a[text()='Services']
+	
+	
+	//ul[@class='leftmenu']/child::li/child::a[text()='Services']
+	//ul[@class='leftmenu']//a[text()='Services']
+	//li[text()='Solutions']/following-sibling::li[2]/child::a[text()='Services']
 
 	public static void main(String[] args) {
 		
@@ -72,6 +98,9 @@ public class XpathLocators {
 //		12: Locate the 'Parabank Caption' using 'XPATH' locator (Syntax 7)
 		driver.findElement(By.xpath("//p[@class='caption' and text()='Experience the difference']"));
 		
+//		13: Locate the 'Services' using 'XPATH' locator (Syntax 8)
+		driver.findElement(By.xpath("//p[@class='caption' and text()='Experience the difference']"));
+
 
 	}
 
