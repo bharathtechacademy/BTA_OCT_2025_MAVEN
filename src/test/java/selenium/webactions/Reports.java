@@ -22,7 +22,7 @@ public class Reports {
 	
 	public static ExtentHtmlReporter html;  //white paper
 	public static ExtentReports extent;  //printer
-	public  static ExtentTest logger; //ink
+	public static ExtentTest logger; //ink
 	
 	// Method to setup the report
 	public static void setupReport() {

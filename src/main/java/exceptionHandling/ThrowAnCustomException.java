@@ -6,7 +6,7 @@ public class ThrowAnCustomException {
 		int age =17;
 
 		if (age < 18) {
-			throw new Exception("Not Eligible to Vote");
+			System.out.println("Not Eligible to Vote");
 		} else {
 			System.out.println("Eligible to Vote");
 		}
