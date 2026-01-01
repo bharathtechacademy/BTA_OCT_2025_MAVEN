@@ -7,7 +7,13 @@
 	<parameter name="APP_PWD" value="admin123"></parameter>
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name="testng.framework.concepts.AppCommons" />			
+			<class name="testng.framework.concepts.AppCommons">
+				<methods>
+					<include name="testCase1"></include>
+					<include name="testCase2"></include>
+					<include name="testCase5"></include>
+				</methods>
+			</class>
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

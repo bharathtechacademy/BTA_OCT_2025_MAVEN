@@ -5,6 +5,9 @@
   <parameter name="APP_PWD" value="admin123"/>
   <parameter name="APP_USER" value="Admin"/>
   <parameter name="APP_URL" value="www.bharathtechacademy.com"/>
+  <listeners>
+    <listener class-name="testng.framework.concepts.TestListeners"/>
+  </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
       <class name="testng.framework.concepts.AppCommons">
@@ -13,11 +16,14 @@
           <include name="closeApplication"/>
           <include name="loginIntoApplication"/>
           <include name="logoutFromApplication"/>
+          <include name="testCase6"/>
           <include name="launchBrowserAndApplication"/>
           <include name="startReporting"/>
           <include name="closeBrowser"/>
+          <include name="testCase2"/>
           <include name="verifyApplicationHomePage"/>
           <include name="testCase1"/>
+          <include name="testCase4"/>
         </methods>
       </class> <!-- testng.framework.concepts.AppCommons -->
     </classes>

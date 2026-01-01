@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Training\Oct_2025_8AM\AutomationTraining\MavenProject\TestRunner\E2ETestSuite.xml</span>
+                    <span>C:\Training\Oct_2025_8AM\AutomationTraining\MavenProject\TestRunner\E2ETestSuiteWithListeners.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,59 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">11 methods, 2 failed,  3 skipped,  6 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testng.framework.concepts.AppCommons" class="method navigator-link" hash-for-method="testCase1">testCase1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testng.framework.concepts.AppCommons" class="method navigator-link" hash-for-method="testCase6">testCase6</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testng.framework.concepts.AppCommons" class="method navigator-link" hash-for-method="testCase4">testCase4</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Retried methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testng.framework.concepts.AppCommons" class="method navigator-link" hash-for-method="testCase1">testCase1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testng.framework.concepts.AppCommons" class="method navigator-link" hash-for-method="testCase1">testCase1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -116,6 +168,21 @@
                         <a href="#" panel-name="suite-Suite" title="testng.framework.concepts.AppCommons" class="method navigator-link" hash-for-method="testCase3(Invalid-Name, Invalid123)">testCase3(Invalid-Name, Invalid123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testng.framework.concepts.AppCommons" class="method navigator-link" hash-for-method="testCase5">testCase5</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testng.framework.concepts.AppCommons" class="method navigator-link" hash-for-method="testCase5">testCase5</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testng.framework.concepts.AppCommons" class="method navigator-link" hash-for-method="testCase5">testCase5</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
@@ -128,6 +195,88 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testng.framework.concepts.AppCommons</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCase1">
+                  </a> <!-- testCase1 -->
+                  <span class="method-name">testCase1</span>
+                  <div class="stack-trace">java.lang.AssertionError: Test Case 1 is Failed
+	at testng.framework.concepts.AppCommons.testCase1(AppCommons.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 26 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCase6">
+                  </a> <!-- testCase6 -->
+                  <span class="method-name">testCase6</span>
+                  <div class="stack-trace">org.testng.internal.thread.ThreadTimeoutException: Method testng.framework.concepts.AppCommons.testCase6() didn&apos;t finish within the time-out 3000
+	at java.base/java.lang.Thread.sleep0(Native Method)
+	at java.base/java.lang.Thread.sleep(Thread.java:509)
+	at testng.framework.concepts.AppCommons.testCase6(AppCommons.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+... Removed 6 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">testng.framework.concepts.AppCommons</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCase1">
+                  </a> <!-- testCase1 -->
+                  <span class="method-name">testCase1</span>
+                  <div class="stack-trace">java.lang.AssertionError: Test Case 1 is Failed
+	at testng.framework.concepts.AppCommons.testCase1(AppCommons.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 26 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCase1">
+                  </a> <!-- testCase1 -->
+                  <span class="method-name">testCase1</span>
+                  <div class="stack-trace">java.lang.AssertionError: Test Case 1 is Failed
+	at testng.framework.concepts.AppCommons.testCase1(AppCommons.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 26 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCase4">
+                  </a> <!-- testCase4 -->
+                  <span class="method-name">testCase4</span>
+                  <div class="stack-trace">java.lang.Throwable: Method testng.framework.concepts.AppCommons.testCase4() on instance testng.framework.concepts.AppCommons@2aceadd4 depends on not successfully finished methods 
+[testng.framework.concepts.AppCommons.testCase2() on instance testng.framework.concepts.AppCommons@2aceadd4
+testng.framework.concepts.AppCommons.testCase1() on instance testng.framework.concepts.AppCommons@2aceadd4]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -157,12 +306,33 @@
                   <span class="parameters">(Invalid-Name,Invalid123)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCase5">
+                  </a> <!-- testCase5 -->
+                  <span class="method-name">testCase5</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCase5">
+                  </a> <!-- testCase5 -->
+                  <span class="method-name">testCase5</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testCase5">
+                  </a> <!-- testCase5 -->
+                  <span class="method-name">testCase5</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Training\Oct_2025_8AM\AutomationTraining\MavenProject\TestRunner\E2ETestSuite.xml</span>
+            <span class="header-content">C:\Training\Oct_2025_8AM\AutomationTraining\MavenProject\TestRunner\E2ETestSuiteWithListeners.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -173,6 +343,9 @@
   &lt;parameter name=&quot;APP_PWD&quot; value=&quot;admin123&quot;/&gt;
   &lt;parameter name=&quot;APP_USER&quot; value=&quot;Admin&quot;/&gt;
   &lt;parameter name=&quot;APP_URL&quot; value=&quot;www.bharathtechacademy.com&quot;/&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;testng.framework.concepts.TestListeners&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;testng.framework.concepts.AppCommons&quot;/&gt;
@@ -203,11 +376,19 @@
               <span class="test-group-name">Regression</span>
               <br/>
               <div class="method-in-group">
+                <span class="method-in-group-name">testCase1</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
                 <span class="method-in-group-name">testCase2</span>
                 <br/>
               </div> <!-- method-in-group -->
               <div class="method-in-group">
                 <span class="method-in-group-name">testCase3</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">testCase4</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -222,6 +403,10 @@
             <div class="test-group">
               <span class="test-group-name">Smoke</span>
               <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">testCase1</span>
+                <br/>
+              </div> <!-- method-in-group -->
               <div class="method-in-group">
                 <span class="method-in-group-name">testCase3</span>
                 <br/>
@@ -243,24 +428,56 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(11);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testCase3')
+data.setCell(0, 1, 'testCase6')
 data.setCell(0, 2, 'testng.framework.concepts.AppCommons')
-data.setCell(0, 3, 9);
+data.setCell(0, 3, 3009);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testCase2')
+data.setCell(1, 1, 'testCase3')
 data.setCell(1, 2, 'testng.framework.concepts.AppCommons')
-data.setCell(1, 3, 2);
+data.setCell(1, 3, 10);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testCase3')
+data.setCell(2, 1, 'testCase1')
 data.setCell(2, 2, 'testng.framework.concepts.AppCommons')
-data.setCell(2, 3, 2);
+data.setCell(2, 3, 8);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testCase3')
+data.setCell(3, 2, 'testng.framework.concepts.AppCommons')
+data.setCell(3, 3, 5);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testCase5')
+data.setCell(4, 2, 'testng.framework.concepts.AppCommons')
+data.setCell(4, 3, 2);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'testCase5')
+data.setCell(5, 2, 'testng.framework.concepts.AppCommons')
+data.setCell(5, 3, 2);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'testCase2')
+data.setCell(6, 2, 'testng.framework.concepts.AppCommons')
+data.setCell(6, 3, 2);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'testCase1')
+data.setCell(7, 2, 'testng.framework.concepts.AppCommons')
+data.setCell(7, 3, 2);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'testCase1')
+data.setCell(8, 2, 'testng.framework.concepts.AppCommons')
+data.setCell(8, 3, 2);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'testCase5')
+data.setCell(9, 2, 'testng.framework.concepts.AppCommons')
+data.setCell(9, 3, 1);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'testCase4')
+data.setCell(10, 2, 'testng.framework.concepts.AppCommons')
+data.setCell(10, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 13 ms</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -275,16 +492,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">1 ignored method</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testng.framework.concepts.AppCommons</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">testCase1</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -300,91 +510,291 @@ return data;
               </div> <!-- configuration-suite before -->
               <div class="configuration-method before">
                 <span class="method-name">launchBrowserAndApplication(Chrome, www.bharathtechacademy.com)</span>
-                <span class="method-start">49 ms</span>
+                <span class="method-start">73 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">loginIntoApplication(Admin, admin123)</span>
-                <span class="method-start">54 ms</span>
+                <span class="method-start">78 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">verifyApplicationHomePage</span>
-                <span class="method-start">55 ms</span>
+                <span class="method-start">80 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testCase3(Valid User, Valid123)</span>
-                <span class="method-start">56 ms</span>
+                <span class="method-start">82 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">logoutFromApplication</span>
-                <span class="method-start">71 ms</span>
+                <span class="method-start">96 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">closeApplication</span>
-                <span class="method-start">73 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">closeBrowser</span>
-                <span class="method-start">74 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">launchBrowserAndApplication(Chrome, www.bharathtechacademy.com)</span>
-                <span class="method-start">77 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">loginIntoApplication(Admin, admin123)</span>
-                <span class="method-start">80 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">verifyApplicationHomePage</span>
-                <span class="method-start">81 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testCase3(Invalid-Name, Invalid123)</span>
-                <span class="method-start">81 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">logoutFromApplication</span>
-                <span class="method-start">86 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">closeApplication</span>
-                <span class="method-start">86 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">closeBrowser</span>
-                <span class="method-start">87 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">launchBrowserAndApplication(Chrome, www.bharathtechacademy.com)</span>
-                <span class="method-start">93 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">verifyApplicationHomePage</span>
-                <span class="method-start">94 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">loginIntoApplication(Admin, admin123)</span>
-                <span class="method-start">94 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testCase2</span>
-                <span class="method-start">95 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">logoutFromApplication</span>
                 <span class="method-start">97 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
                 <span class="method-start">99 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowserAndApplication(Chrome, www.bharathtechacademy.com)</span>
+                <span class="method-start">103 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginIntoApplication(Admin, admin123)</span>
+                <span class="method-start">104 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">verifyApplicationHomePage</span>
+                <span class="method-start">105 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCase3(Invalid-Name, Invalid123)</span>
+                <span class="method-start">106 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">logoutFromApplication</span>
+                <span class="method-start">117 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">closeApplication</span>
-                <span class="method-start">99 ms</span>
+                <span class="method-start">118 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">118 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowserAndApplication(Chrome, www.bharathtechacademy.com)</span>
+                <span class="method-start">126 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginIntoApplication(Admin, admin123)</span>
+                <span class="method-start">127 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">verifyApplicationHomePage</span>
+                <span class="method-start">128 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCase2</span>
+                <span class="method-start">129 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">logoutFromApplication</span>
+                <span class="method-start">134 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">135 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">136 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowserAndApplication(Chrome, www.bharathtechacademy.com)</span>
+                <span class="method-start">138 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginIntoApplication(Admin, admin123)</span>
+                <span class="method-start">139 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">verifyApplicationHomePage</span>
+                <span class="method-start">139 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCase1</span>
+                <span class="method-start">140 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">logoutFromApplication</span>
+                <span class="method-start">153 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">154 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">155 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowserAndApplication(Chrome, www.bharathtechacademy.com)</span>
+                <span class="method-start">157 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginIntoApplication(Admin, admin123)</span>
+                <span class="method-start">158 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCase1</span>
+                <span class="method-start">159 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">verifyApplicationHomePage</span>
+                <span class="method-start">159 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">logoutFromApplication</span>
+                <span class="method-start">164 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">166 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">167 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">loginIntoApplication(Admin, admin123)</span>
+                <span class="method-start">168 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowserAndApplication(Chrome, www.bharathtechacademy.com)</span>
+                <span class="method-start">168 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testCase1</span>
+                <span class="method-start">169 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">verifyApplicationHomePage</span>
+                <span class="method-start">169 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">logoutFromApplication</span>
+                <span class="method-start">175 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">177 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">179 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowserAndApplication(Chrome, www.bharathtechacademy.com)</span>
+                <span class="method-start">189 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginIntoApplication(Admin, admin123)</span>
+                <span class="method-start">191 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">verifyApplicationHomePage</span>
+                <span class="method-start">191 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCase5</span>
+                <span class="method-start">193 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">logoutFromApplication</span>
+                <span class="method-start">196 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">196 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">196 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowserAndApplication(Chrome, www.bharathtechacademy.com)</span>
+                <span class="method-start">198 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginIntoApplication(Admin, admin123)</span>
+                <span class="method-start">200 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">verifyApplicationHomePage</span>
+                <span class="method-start">201 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCase5</span>
+                <span class="method-start">201 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">logoutFromApplication</span>
+                <span class="method-start">206 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">211 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">213 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowserAndApplication(Chrome, www.bharathtechacademy.com)</span>
+                <span class="method-start">216 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">loginIntoApplication(Admin, admin123)</span>
+                <span class="method-start">217 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testCase5</span>
+                <span class="method-start">218 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">verifyApplicationHomePage</span>
+                <span class="method-start">218 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">logoutFromApplication</span>
+                <span class="method-start">222 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">223 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">224 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">loginIntoApplication(Admin, admin123)</span>
+                <span class="method-start">226 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">launchBrowserAndApplication(Chrome, www.bharathtechacademy.com)</span>
+                <span class="method-start">226 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testCase6</span>
+                <span class="method-start">227 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">verifyApplicationHomePage</span>
+                <span class="method-start">227 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method after">
+                <span class="method-name">logoutFromApplication</span>
+                <span class="method-start">3237 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">3239 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">closeBrowser</span>
+                <span class="method-start">3239 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-suite after">
                 <span class="method-name">stopReporting</span>
-                <span class="method-start">183 ms</span>
+                <span class="method-start">3368 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
